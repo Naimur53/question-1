@@ -1,0 +1,213 @@
+:root {
+  --main-blue: #06323f;
+  --main-yellow: #ffde00;
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #0e0e0e;
+}
+.container {
+  width: 564px;
+  height: 423px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--main-blue);
+}
+
+.main-content-wrap {
+  width: 385px;
+  height: 211px;
+  background: var(--main-yellow);
+  border-radius: 28px;
+  position: relative;
+}
+
+/* tow side yellow extra bars */
+.main-content-wrap::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  background: var(--main-yellow);
+  transform: translate(100%, -50%);
+  right: 0px;
+  top: 50%;
+  height: 57px;
+  width: 14px;
+  border-radius: 0px 7px 7px 0px;
+}
+.main-content-wrap::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  background: var(--main-yellow);
+  transform: translate(-100%, -50%);
+  left: 0px;
+  top: 50%;
+  height: 57px;
+  width: 14px;
+  border-radius: 7px 0px 0px 7px;
+}
+
+.knife-content-wrap {
+  position: absolute;
+  background: var(--main-blue);
+  height: 212px;
+  width: 273px;
+  left: 56px;
+}
+.knife-content-wrap::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  background: var(--main-blue);
+  transform: translate(-100%, -50%);
+  left: 1px;
+  top: 50%;
+  width: 23px;
+  height: 142px;
+  --rounded-value: 13px;
+  border-radius: var(--rounded-value) 0px 0px var(--rounded-value);
+}
+.knife-content-wrap::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  background: var(--main-blue);
+  transform: translate(100%, -50%);
+  right: 1px;
+  top: 50%;
+  width: 23px;
+  height: 142px;
+  --rounded-value: 15px;
+  border-radius: 0px var(--rounded-value) var(--rounded-value) 0px;
+}
+.right-knife {
+  display: inline-block;
+  position: relative;
+  rotate: -45deg;
+  left: 94px;
+  bottom: 18px;
+  z-index: 30;
+}
+.right-knife-bar {
+  /* 188px */
+  height: 192px;
+  width: 42px;
+  background: var(--main-yellow);
+  position: relative;
+  z-index: 40;
+}
+.right-knife-bar::after {
+  /* 188px */
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: -15px;
+  left: 6px;
+  height: 30px;
+  width: 30px;
+  background: var(--main-yellow);
+  rotate: 45deg;
+}
+/* kine upper hand ---- */
+.right-knife-bar::before {
+  /* 188px */
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  width: 112px;
+  height: 28px;
+  background: var(--main-yellow);
+  /* rotate: 45deg; */
+}
+
+/* knife hand */
+.right-knife-hand {
+  position: absolute;
+  left: 50%;
+  bottom: -26px;
+  height: 58px;
+  width: 28px;
+  background: var(--main-yellow);
+  transform: translate(-50%, 100%);
+  z-index: 30;
+  border-radius: 0px 0px 11px 11px;
+}
+.cut {
+  position: absolute;
+  background: var(--main-blue);
+  width: 72px;
+  height: 100%;
+  top: 0;
+  z-index: 30;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+/* left kin */
+.left-knife {
+  display: inline-block;
+  position: relative;
+  rotate: 45deg;
+  left: 90px;
+  bottom: 18px;
+}
+
+.left-knife-bar {
+  /* 188px */
+  height: 192px;
+  width: 42px;
+  background: var(--main-yellow);
+  position: relative;
+  z-index: 10;
+}
+.left-knife-bar::after {
+  /* 188px */
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: -15px;
+  left: 6px;
+  height: 30px;
+  width: 30px;
+  background: var(--main-yellow);
+  rotate: 45deg;
+}
+/* kine upper hand ---- */
+.left-knife-bar::before {
+  /* 188px */
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  width: 112px;
+  height: 28px;
+  background: var(--main-yellow);
+  /* rotate: 45deg; */
+}
+
+/* knife hand */
+.left-knife-hand {
+  position: absolute;
+  left: 50%;
+  bottom: -26px;
+  height: 58px;
+  width: 28px;
+  background: var(--main-yellow);
+  transform: translate(-50%, 100%);
+  z-index: 30;
+  border-radius: 0px 0px 11px 11px;
+}
